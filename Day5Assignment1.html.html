@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<style>
+body {padding-top:50px} 
+</style> 
+</head>
+<body>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+<div id="Result"></div> 
+
+<script>
+console.log("Code using Higher Order Functions");
+
+num = Math.abs(prompt("Enter number you want the array till : "));
+console.log("Positive Number : ", num);
+arr = [];
+for (let i = 0; i < num; i++) {
+    arr[i] = i + 1;
+}
+console.log("Array List : ", arr);
+let oddnum = arr.filter(e1 => e1 % 2 != 0);
+console.log("Odd Numbers in the array : ", oddnum);
+let cubenum = oddnum.map(e1 => Math.pow(e1, 3));
+console.log("Cubes : ", cubenum);
+
+</script>
+</body>
+</html>
