@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments Day 6</title>
+
+    <style>
+        .darkmode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+     <h1>Assignment 1</h1>
+    <h4>Changing background color of the webpage after 5 sec...</h4>
+    <script type="text/javascript">
+        var c = ["skyblue", "yellow", "pink", "lightgreen", "orange"];
+        function changeColor() {
+            setTimeout(function loop() {
+                document.bgColor = c.shift();
+                if (c.length) {
+                    setTimeout(loop, 5000);
+                }
+            }, 5000);
+        }
+        function start() {
+            setInterval(changeColor(), 20000);
+        }
+    </script>
+    <body onload="start()"> 
+
+
+     <h1>Assignment 3</h1>
+    <p id="table"></p>
+    <script src="scripts/table.js"></script> 
+
+
+    <h1>Assignment 3</h1>
+    <h4 id="demo"></h4>
+    <h5 id="time"></h5>
+    <button onclick="darkmode()">Switch to DarkMode</button>
+    <script src="scripts/classList.js"></script>
+
+</body>
+
+</html>
